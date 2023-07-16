@@ -20,6 +20,7 @@ module.exports = {
       extends: [
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'plugin:i18next/recommended',
       ],
 
       parserOptions: {
@@ -36,6 +37,7 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
+    'i18next',
   ],
   rules: {
     'react/jsx-indent': [2, 4],
@@ -50,6 +52,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 'warn',
     'no-underscore-dangle': 'off',
     '@typescript-eslint/naming-convention': 'off',
+    'i18next/no-literal-string': ['error', { markupOnly: true }],
   },
   globals: {
     __IS_DEV__: true,
