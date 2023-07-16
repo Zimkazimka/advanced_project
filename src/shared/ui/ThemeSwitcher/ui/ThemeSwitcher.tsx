@@ -1,4 +1,4 @@
-import { classnames } from 'shared/lib/classNames/classnames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import React from 'react';
 import { Theme, useTheme } from 'app/providers/ThemeProvider';
 import LightIcon from 'shared/assets/icons/theme-light.svg';
@@ -14,7 +14,7 @@ export function ThemeSwitcher({ className }: ThemeSwitcherProps) {
   return (
       <Button
           theme={ThemeButton.CLEAR}
-          className={classnames('', {}, [className])}
+          className={classNames('', {}, [className])}
           onClick={toggleTheme}
       >
           {theme === Theme.DARK ? <LightIcon /> : <DarkIcon />}
