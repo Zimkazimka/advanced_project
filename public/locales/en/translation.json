@@ -5,5 +5,8 @@
   "Язык": "English",
   "О сайте": "About",
   "переключить": "toggle",
-  "Страница не найдена": "Page not found"
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка": "Something went wrong",
+  "Обновить страницу": "Reload page",
+  "Выкинуть ошибку": "Throw error"
 }
