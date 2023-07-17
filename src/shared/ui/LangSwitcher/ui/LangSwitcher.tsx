@@ -3,23 +3,23 @@ import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
 
 interface LangSwitcherProps {
-  className?: string;
+    className?: string;
 }
 
 export function LangSwitcher({ className }: LangSwitcherProps) {
-  const { t, i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
 
-  const toggleLang = () => {
+    const toggleLang = () => {
     // eslint-disable-next-line @typescript-eslint/no-floating-promises
-    i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
-  };
-  return (
-      <Button
-          className={classNames('', {}, [className])}
-          theme={ThemeButton.CLEAR}
-          onClick={toggleLang}
-      >
-          {t('Язык')}
-      </Button>
-  );
+        i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
+    };
+    return (
+        <Button
+            className={classNames('', {}, [className])}
+            theme={ThemeButton.CLEAR}
+            onClick={toggleLang}
+        >
+            {t('Язык')}
+        </Button>
+    );
 }

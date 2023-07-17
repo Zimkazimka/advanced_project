@@ -7,19 +7,19 @@ import { NavBar } from 'widgets/NavBar';
 import { SideBar } from 'widgets/SideBar';
 
 function App() {
-  const { theme } = useTheme();
+    const { theme } = useTheme();
 
-  return (
-      <div className={classNames('app', {}, [theme])}>
-          <Suspense fallback="">
-              <NavBar />
-              <div className="content-page">
-                  <SideBar />
-                  <AppRouter />
-              </div>
-          </Suspense>
-      </div>
-  );
+    return (
+        <div className={classNames('app', {}, [theme])}>
+            <Suspense fallback="">
+                <NavBar />
+                <div className="content-page">
+                    <SideBar />
+                    <AppRouter />
+                </div>
+            </Suspense>
+        </div>
+    );
 }
 
 export default App;

@@ -5,29 +5,29 @@ import { useTranslation } from 'react-i18next';
 import cls from './NavBar.module.scss';
 
 interface NavBarProps {
-  className?: string;
+    className?: string;
 }
 
 export function NavBar({ className }: NavBarProps) {
-  const { t } = useTranslation();
+    const { t } = useTranslation();
 
-  return (
-      <div className={classNames(cls.Navbar, {}, [className])}>
-          <div className={classNames(cls.links)}>
-              <AppLink
-                  theme={AppLinkTheme.SECONDARY}
-                  to="/about"
-                  className={classNames(cls.mainLink)}
-              >
-                  {t('О сайте')}
-              </AppLink>
-              <AppLink
-                  theme={AppLinkTheme.SECONDARY}
-                  to="/"
-              >
-                  {t('Главная')}
-              </AppLink>
-          </div>
-      </div>
-  );
+    return (
+        <div className={classNames(cls.Navbar, {}, [className])}>
+            <div className={classNames(cls.links)}>
+                <AppLink
+                    theme={AppLinkTheme.SECONDARY}
+                    to="/about"
+                    className={classNames(cls.mainLink)}
+                >
+                    {t('О сайте')}
+                </AppLink>
+                <AppLink
+                    theme={AppLinkTheme.SECONDARY}
+                    to="/"
+                >
+                    {t('Главная')}
+                </AppLink>
+            </div>
+        </div>
+    );
 }
