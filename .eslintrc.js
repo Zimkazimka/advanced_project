@@ -16,13 +16,15 @@ module.exports = {
             env: {
                 node: true,
             },
-            files: ['*.ts', '*.tsx'],
-
             extends: [
                 'plugin:@typescript-eslint/recommended',
                 'plugin:@typescript-eslint/recommended-requiring-type-checking',
                 'plugin:i18next/recommended',
             ],
+            files: ['*.ts', '*.tsx', '**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
 
             parserOptions: {
                 project: ['./tsconfig.json'],
@@ -43,7 +45,6 @@ module.exports = {
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
-        indent: 'off',
         '@typescript-eslint/indent': [2, 4],
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'warn',
@@ -57,6 +58,13 @@ module.exports = {
         '@typescript-eslint/naming-convention': 'off',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
+        '@typescript-eslint/no-floating-promises':
+            ['off',
+                {
+                    allowAsStatement: true,
+                    ignoreVoid: true,
+                },
+            ],
     },
     globals: {
         __IS_DEV__: true,

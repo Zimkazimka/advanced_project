@@ -1,5 +1,5 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["src/**/*", ".eslintrc.js", "babel.config.json"],
+  "include": ["src/**/*", ".eslintrc.js", "babel.config.json", "./config/jest/setupTests.ts"],
   "exclude": ["node_modules", "test", "dist", "dist/**/*spec.ts", "build"]
 }
