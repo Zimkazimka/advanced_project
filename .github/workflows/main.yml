@@ -13,7 +13,7 @@ jobs:
         node-version: [18.x]
     steps:
       - uses: actions/checkout@v2
-      - name: Staring Node.js ${f matrix. node-version }}
+      - name: Staring Node.js ${{ matrix. node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${f matrix. node-version }}
