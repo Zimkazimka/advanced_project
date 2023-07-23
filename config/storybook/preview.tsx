@@ -18,6 +18,13 @@ const preview: Preview = {
             ],
         },
     },
+    decorators: [
+        (Story) => (
+            <div className={`app ${Theme.LIGHT}`}>
+                <Story />
+            </div>
+        ),
+    ],
 };
 
 export default preview;
